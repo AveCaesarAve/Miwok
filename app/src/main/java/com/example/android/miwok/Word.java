@@ -1,3 +1,5 @@
+package com.example.android.miwok;
+
 /**
  * {@link Word} represents a vocabulary word that the user wants to learn.
  * It contains a default translation and a Miwok translation for that word.
@@ -11,7 +13,7 @@ public class Word {
     private String mMiwokTranslation;
 
     /**
-     * Create a new Word object.
+     * Create a new com.example.android.miwok.Word object.
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
      *                           (such as English)
