@@ -12,6 +12,9 @@ public class Word {
     /** Miwok translation for the word */
     private String mMiwokTranslation;
 
+    /** Image resource for the word */
+    private int mImageWordId;
+
     /**
      * Create a new com.example.android.miwok.Word object.
      *
@@ -20,6 +23,21 @@ public class Word {
      * @param miwokTranslation is the word in the Miwok language
      */
     public Word(String defaultTranslation, String miwokTranslation) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+    }
+
+    /**
+     * Create a new com.example.android.miwok.WordImages object.
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with
+     *                           (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     *
+     * @param imageWordId is the image of the word
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageWordId) {
+        mImageWordId = imageWordId;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
     }
@@ -37,5 +55,13 @@ public class Word {
     public String getMiwokTranslation() {
         return mMiwokTranslation;
     }
+
+    /**
+     * Get the image for the word.
+     */
+    public int getImageWordId() {
+        return mImageWordId;
+    }
+
 
 }
