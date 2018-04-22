@@ -7,39 +7,44 @@
     <ImageView
         android:id="@+id/itemImage"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height"
-        android:background="@color/tan_background"
-        android:minHeight="@dimen/list_item_height"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_height="@dimen/list_item_height" />
 
     <LinearLayout
         android:id="@+id/text_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:orientation="vertical">
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/word2"
+            style="bold"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            />
 
         <TextView
             android:id="@+id/word1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:paddingTop="16dp"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/word2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_below="@id/word2"
             android:layout_weight="1"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            />
 
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/play_icon"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/ic_play_arrow" />
 
 </LinearLayout>
