@@ -19,6 +19,8 @@ public class Word {
      * Image resource for the word
      */
     private int mImageWordId = NO_IMAGE_PROVIDED;
+    /** Audio resource ID for the word */
+    private int mAudioResourceId;
 
     /**
      * Create a new com.example.android.miwok.Word object.
@@ -26,10 +28,13 @@ public class Word {
      * @param defaultTranslation is the word in a language that the user is already familiar with
      *                           (such as English)
      * @param miwokTranslation   is the word in the Miwok language
+     *
+     * @param audioResourceId is the resource ID for the audio file associated with this word
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -40,10 +45,11 @@ public class Word {
      * @param miwokTranslation   is the word in the Miwok language
      * @param imageWordId        is the image of the word
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageWordId) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageWordId, int audioResourceId) {
         mImageWordId = imageWordId;
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -74,4 +80,12 @@ public class Word {
     public boolean hasImage() {
         return mImageWordId != NO_IMAGE_PROVIDED;
     }
+
+
+    /**
+     +     * Return the audio resource ID of the word.
+     +     */
+    public int getAudioResourceId() {
+        return mAudioResourceId;
+        }
 }
